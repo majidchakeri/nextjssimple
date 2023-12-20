@@ -1,0 +1,4 @@
+node_modules;
+out.cache;
+next.config.js.vscode.DS_Store;
+npm - debug.log;
