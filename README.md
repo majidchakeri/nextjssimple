@@ -1,59 +1,36 @@
-برای راه اندازی این پروژه از [Next.js](https://nextjs.org/) استفاده شده.
-دلیل استفاده از نکست جی اس استفاده از قابلیت های اون و همچنین صحبتهای انجام شده در مصاحبه قبل بود.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-از طریق دستور زیر پروژه استارت خواهد شد:
+First, run the development server:
 
 ```bash
 npm run dev
-
-برای اجرای دستور لینت میتوانید از دستور زیر استفاده کنید :
-
-npm run lintmyprogram
-
-
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-پروزه در آدرس [http://localhost:3000](http://localhost:3000) در دسترس خواهد بود
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## توضیحات تسکها
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1\_ پروژه از طریق کست جی اس ایجاد و راه اندازی شده است.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-2\_ هر سه روت مدنظر در پروژه ساخته شده است که در دایرکتوری pages قابل دسترس می باشند.
-در تمامی پیجها از 'use client' جهت رندر در مرورگر استفاده شده است.
+## Learn More
 
-3\_ در روت verification کامپونتتهای مورد نیاز ایجاد شده است.
-کلیه وظایف محوله انجام شده است اما به دلیل تعداد زیاد تسکهای ارسالی از اعمال css خودداری شده است زیرا اولویت برای اینجانب انجام تعداد بیشتری از تسکهای جاوا اسکریپتی موجود در فایل ارسالی بوده است. همچنین توانمند اینجانب در کار با css و موارد مربوطه را در مصاحبه قبلی ملاحظه فرمودید.
+To learn more about Next.js, take a look at the following resources:
 
-4\_ برای انجام این تسک از پکیج eslint استفاده شده است.
-دلیل استفاده از این پکیج، سازگار بودن بسیار مناسب آن با نکست جی اس و همچنین خوانایی بیشتر فایلها و تست های این پکیج بوده است.
-دستور مورد نظر در داخل ترمینال قابل استفاده است.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```bash
-npm run lintmyprogram
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-5\_ این تسک در روت users انجام شده است. پس از ورود به روت مزبور با فشردن کلیدهای ذکر شده مدال به عنوان دیالوگ باکس ظاهر خواهد شد.
-با زدن دکمه close یا فشردن دکمه Esc کیبورد مدال مذکور بسته خواهد شد.
+## Deploy on Vercel
 
-6\_ برای پیاده سازی این تسک از پکیج ریداکس تولکیت استفاده شده است.
-پس از نوشتن هر مطلبی در داخل اینپوت موجود در دیالوگ باکس تسک قبلی مقدار مربوطه از طریق ریداکس در زیر اینپوت نمایش داده میشود.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-7\_ این تسک توسط کتابخانه نکست جی اس به صورت پیش فرض انجام شده است. همچنین امکان انجام آن نیز وجود دارد اما با توجه به انجام اتوماتیک آن توسط نکست جی اس انجام دستی آن را در اولویت قرار ندادم.
-
-8\_ این تسک با استفاده از پکیج next-pwa انجام شده است. نسخه نصبی آن در سیستم عامل شخصی من به درستی کار کرده است.
-
-9\_ با توجه به اینکه به سوال اینجانب در رابطه با این تسک پاسخ دیرهنگام داده شد انجام این تسک را به اولویت آخر منتقل کردم. کتابخانه معرفی شده در توضیحات تسکها معمولا توسط تسترهای نرم افزار استفاده میشود. اینجانب با توجه به سابقه کار قبلی خود در زمینه وب اسکرپینگ تسلط خوبی به کتابخانه puppeteer داشته ام و توسعه تست از طریق این کتابخانه را ترجیح میدهم. همچنین پس از ارسال کدها در گیت هاب به توسعه این تسک خواهم پرداخت.
-
-10\_ این تسک با توجه به عدم آشنایی اینجانب با پیاده سازی میکرو فرانت اند برای من زمانبر بود و از انجام ان منصرف شدم.
-
-11\_ فایل داکر در روت پروژه ساخته شده است. با استفاده از فایل مذکور بیلد گرفته شده و ایمیج ساخته شده در کامپیوتر شخصی اینجانت موجود است که در جلسه آینده قابل ارائه است.
-
-12\_ با توجه به عدم پاسخ به پرسش این جانب در زمینه توسعه ci/cd در پروژه این تسک صرفا تا مرحله ci پیش رفته است. پس از پوش کردن پروژه به گیت هاب در قسمت اکشن مجموعه تستهای انجام شده توسط eslint در داخل گیت هاب اکشن قابل مشاهده است.
-با توجه به نیاز به سرور مجازی برای توسعه بخش cd از انجام آن منصرف شدم.
-
-```
-
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

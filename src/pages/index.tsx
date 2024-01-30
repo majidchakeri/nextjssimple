@@ -1,21 +1,20 @@
 'use client'
 
 import React from "react";
-import store from "@/store/store";
-import { Provider } from 'react-redux';
 import Link from 'next/link';
+import '../app/globals.css';
+
+import Layout from '@/components/layouts/DefaultLayouts'
 
 
 const Index : React.FC = () => {
   return(
-    <Provider store={store}>
-      <h1>It is home page.</h1>
-      <div>
-      <Link href="/verification">verification page</Link><br/>
-      <Link href="/users">users page</Link><br/>
-      <Link href="/products">products page</Link><br/>
+    <Layout>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <h1 className="text-4xl">It is home page.</h1>
+        <Link href="/login">verification page</Link>
       </div>
-    </Provider>
+    </Layout>
   )
 }
 
