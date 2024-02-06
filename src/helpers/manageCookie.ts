@@ -10,7 +10,6 @@ export const GetCookie = (name : string) => {
 	const cookieString : string = decodeURIComponent(document.cookie);
 	
 	const cookies : string[] = cookieString.split(";");
-	console.log('log decoded cookie', cookieString);
 
 	let cookieName : string = `${name}=`;
 
@@ -19,12 +18,10 @@ export const GetCookie = (name : string) => {
 
 		while (selectedCookie.charAt(0) == " ") {
 			selectedCookie = selectedCookie.substring(1);
-            console.log('log c in get cookie ', selectedCookie);
             
 		}
 
 		if (selectedCookie.indexOf(cookieName) == 0) {
-            console.log('log c in get cookie ', selectedCookie);
 
 			return selectedCookie.substring(cookieName.length, selectedCookie.length);
 		}

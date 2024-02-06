@@ -4,14 +4,24 @@ import { GetCookie } from "../manageCookie";
 import { LoginForm } from "@/utils/types/loginTypes";
 import { ENV } from "@/utils/const/main";
 
+const getCookie = (name: string) => GetCookie(name);
+
 const api = axios.create({
   baseURL: `${ENV.basePath}${process.env.REACT_APP_API_URL}`,
-  headers: { accept: "application/json" },
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
 });
 
 api.interceptors.request.use((config) => {
-  config.headers["Authorization"] = `Bearer ${GetCookie("token")}`;
-  console.log("header is ====", config.headers);
+  // config.headers["Content-Type"] = "application/json";
+
+  const token = getCookie("token");
+  if (token) {
+    // config.headers["Authorization"] = `Bearer ${token}`;
+    config.headers["Authorization"] = `Bearer ${token}`;
+  }
 
   return config;
 });
@@ -32,13 +42,8 @@ const get = async (url: string, params = {}) => {
 };
 
 const post = async (url: string, params = {}) => {
-  console.log("process.env.NODE_ENV", process.env.NODE_ENV);
-
-  console.log("process.env.REACT_APP_DEV_URL", process.env.REACT_APP_DEV_URL);
-  console.log("url is url ", url);
-
   // process.env.NODE_ENV;
-  return await api.post(url);
+  return await api.post(url, params);
 };
 
 const put = async (url: string, params = {}) => {
@@ -70,7 +75,7 @@ const formData = async (
 export default {
   auth: {
     login: async (params: LoginForm) => {
-      const response = await post("/auth/login", params);
+      const response = await post("Account/login", params);
       return response.data;
     },
   },
